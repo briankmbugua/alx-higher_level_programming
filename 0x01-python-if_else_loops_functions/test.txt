@@ -1,0 +1,8 @@
+the last digit of {number} is {lastdigit}
+if lastdigit is > than 5 
+#the last digit of {number} is {lasdigit} and is greater than 5
+if lastdigit is 0
+#the last digit of {number} is {lasdigit} and is 0
+if lasdigit is < 6 and not 0
+#the last digit of {number} is {lasdigit} and is less than 6 and not 0
+
