@@ -19,3 +19,19 @@ if the last digit is less than 6 and not 0: the string and is less than 6 and no
 followed by a new line
 ## solution
 abs() this function in Pyhton returns the absolute value of a number, the absolute value of a number is the magnitude of a number without considering its sing.It returns the positive distance from zero regardless of whether the number is positive or negative
+You can use if elif else statement
+``` python
+#!/usr/bin/python3
+import random
+number =  random.randint(-10000, 10000)
+last = abs(number) % 10
+if number < 0:
+    last = -last
+print(f"Last digit of {number} is {last} and is {'greater than 5' if last > 5 else '0' if last == 0 else 'less than 6 and not 0'}")
+```
+# 2-print_alphabet.py
+print ASCII alphabet in python in lowercase
+in ASCII table lowercase a is 97 and lowercase z is 122
+## solution
+loop from 97 to 122 and use chr() function in python
+chr() is a built-in function in Python that returns a string representing a character whose unicode code point is the interger parameter
