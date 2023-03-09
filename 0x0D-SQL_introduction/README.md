@@ -42,19 +42,60 @@ SQL statements are divided into two major categories: <span style="color:yellow"
 DDL statements are used to build and modify the structure of your tables and other objects in the database.  
 When you execute a DDL statement it takes effect immediately
 - The create table statement does excatly that
-> <span style="color:yellow"> CREATE TABLE </span> < table name > (  
+```sql
+CREATE TABLE<table name>(  
     < attribute name 1 > < data type 1 >  
     < attribute name n > < data type n >  
     );
->
+```
 The <span style="color:yellow"> data types </span> that you will use most frequently are character strings, which might be called VARCHAR or CHAR for variable or fixed length strings: numeric types such as NUMBER or INTERGER, which will usually specify a precision; and DATE or related types  
 ### Alter table is also part of the ddl
-> ALTER TABLE < table name >
+```sql
+ALTER TABLE < table name >
 ADD CONSTRAINT < constraint name > PRIMARY KEY (< attribute list >);
->
+```
 
 ### Drop table is also part of the ddl
-> DROP TABLE < table name >;  
+```sql
+DROP TABLE < table name >;  
 ALTER TABLE < table name >
 DROP CONSTRAINT < constraint name>;  
->
+```
+All of the information about your objects in your schema is contained, not suprisingly, in a set of tables that is called the <span style="color:yellow">data dictionary</span>
+
+# Data manipulation language
+DML statements are used to work with the data in tables.  
+When you are connected to most multi-user databases you are in effect working with a private copy of your tables that can't be seen by anyoone else untill you are finished or tell the system that you are finished  
+The SELECT statement is considered to be part of DML even though it just retrieves data rather than modifying it.
+- The insert statement is used to add new rows to a table
+```sql
+INSERT INTO < table name >  
+VALUES (<value 1>, ... <value n>);
+```
+The comma-delimited list of values must match the table structure excatly in the number of attributes and the data type of each attribute
+Character type values are always in quotes; date values are often(but not always) in the format 'yyy-mm-d'
+YOU WILL NEED TO SEPARATE <span style="color:yellow">INSERT</span> statement for every row
+- The update statement is used to change values that are already in a table
+```sql
+UPDATE <table name>
+SET <attribute> = <expression>
+WHERE <condition>;
+```
+
+The update expression can a constant, any computed value, or even the result of a SELECT statement that returns a single row and a single column.  
+If the WHERE clause is omitted, then the specified attribute is set to the same value in every row of the table
+You can also set multiple attributes values at the same time with a comma-delimited list of attribute=expression pairs
+- The <span style="color:yellow">DELETE</span> does just that for rows in a table
+```sql
+DELETE FROM <table name>
+  WHERE <condtion>;
+```
+If the WHERE clause is omitted then every row of the table is deleted
+- if you are using a multi-user system, you may need to make your DML changes visible to the rest of the users of the database.When you log out just type:
+```sql
+COMMIT;
+```
+- If you've messed up your changes in this type of system, and want to restore your private copy of the database to the way it was before you started(this works if you haven't already typed COMMIT), just type:
+```sql
+ROLLBACK
+```
