@@ -112,3 +112,9 @@ SELECT {attribute}+
   [ WHERE {boolean predicate to pick rows} ]
   [ ORDER BY {attribute}+ ]
 ```
+Of the four clauses, only the first two are required.The two shown in square brackets are optional.
+It is helpful to follow a specific step-by-step sequence.
+- The SELECT clause allows us to specify a comma-separated list of attribute names corresponding to the columns that are to be retrieved.You can use the * asterisk character, to retrieve all the columns
+- The FROM clause is where we specify the name of the table from which to retrieve rows
+- The WHERE clause is used to constrain which rows to retrieve.By specifying a boolean predicate that compares the values of table columns to literal values or to other columns
+- The OEDER BY clause gives us a way to order the display of the rows in the result statement
