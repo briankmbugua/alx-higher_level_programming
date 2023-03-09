@@ -99,3 +99,16 @@ COMMIT;
 ```sql
 ROLLBACK
 ```
+
+# Basic queries: SQL and RA
+In SQL, to retrieve data stored in our tables, we use the SELECT statement.The result of this statement is always in form of a table that we can view with our database client software or use with programming languages to build dynamic web pages or desktop applications.  
+While the result may look like a table, it is not stored in the database like the named tables are.  
+The result of a SELECT statement can also be used a part of another statement.
+# Basic syntax of SELECT statement
+SELECT Statement Consists of four clauses
+```sql
+SELECT {attribute}+
+  FROM {table}+
+  [ WHERE {boolean predicate to pick rows} ]
+  [ ORDER BY {attribute}+ ]
+```
