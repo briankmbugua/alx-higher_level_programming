@@ -33,5 +33,10 @@ print(f"Last digit of {number} is {last} and is {'greater than 5' if last > 5 el
 print ASCII alphabet in python in lowercase
 in ASCII table lowercase a is 97 and lowercase z is 122
 ## solution
+The requirment is to use string format() method but you can also use chr()
 loop from 97 to 122 and use chr() function in python
 chr() is a built-in function in Python that returns a string representing a character whose unicode code point is the interger parameter
+```python
+for i in range(97, 123):
+    print(chr(i), end = " ")
+```
