@@ -143,4 +143,20 @@ FROM orderlines;
 We can create our own column heading or alias using the AS keyword.
 ```sql
 SELECT unitSalePrice * quantity AS subtotal
-FROM 
+FROM orderlines;
+```
+# Aggregate functions
+SQL <span style="color:yellow">aggregate functions</span> let us compute values based on multiple rows.They are used as part of the SELECT clause, and also create new columns in the output.  
+***Example*** Let's just find the total amount of all our sales from the orderline table
+```sql
+SELECT SUM(unitSalePrice * quantity) AS totalsales
+FROM orderlines;
+``` 
+### GROUP BY clause
+```sql
+SELECT custID, orderDate, SUM(unitSalePrice * quantity)
+FROM orderlines
+GROUP BY custID, orderDate;
+```
+The SELECT clause and the GROUP BY clause contain excatly the same list of attributes, except for the calculation.In most cases there will be an error message if you forget to do this.
+Other frequently-used functions that work the same way as SUM include MIN(minimum value of those in the grouping), MAX(max value of those in the grouping), and AVG(avarage of those in the grouping)
