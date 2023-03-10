@@ -118,3 +118,15 @@ It is helpful to follow a specific step-by-step sequence.
 - The FROM clause is where we specify the name of the table from which to retrieve rows
 - The WHERE clause is used to constrain which rows to retrieve.By specifying a boolean predicate that compares the values of table columns to literal values or to other columns
 - The OEDER BY clause gives us a way to order the display of the rows in the result statement
+
+# Retrival with relational algebra
+SQL is a declarative language As such, SQL is used to declare what is to be retrieved from the database.
+In an imperative language, we do specifiy the steps to take to solve a problem, such as how to retrieve data from a database.Thus, it is the responsibility of the database system to determine how to retrieve what is declared in SQL.  
+In relational database systems this is done by translating SQL into <span style="color:blue">Relational Algebra</span>
+
+# SQL technique: functions
+Sometime the information we need is not actually in the database, but has to be computed in some way.
+There are many functions in the implementation of SQL.
+
+# Computed columns
+
