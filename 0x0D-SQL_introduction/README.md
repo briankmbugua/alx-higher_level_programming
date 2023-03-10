@@ -160,3 +160,44 @@ GROUP BY custID, orderDate;
 ```
 The SELECT clause and the GROUP BY clause contain excatly the same list of attributes, except for the calculation.In most cases there will be an error message if you forget to do this.
 Other frequently-used functions that work the same way as SUM include MIN(minimum value of those in the grouping), MAX(max value of those in the grouping), and AVG(avarage of those in the grouping)
+
+The COUNT function is slightly different, since it returns the number of rows in a grouping.To count all rows we can use the asterisk * 
+```sql
+SELECT COUNT(*)
+FROM orders;
+```
+# Other functions
+Refer to documentation to use different functions from database management systems
+- Functions for rounding, truncating, converting, and formatting numeric data types.
+- Functions for concatenating, altering case, and manipulating data types.
+- Functions for formatting dates and times, or retrieving the date and time from the OS
+- Functions for converting data types such as dates or numeric to character string, and vice-versa
+- Functions for supplying visible values to null attributes, allowing conditional output and other miscellaneous tasks.
+
+# SQL techniques: subqueries
+Sometimes you don't have enough information available when you desing a query to determine which rows you want.In this case you will have to find the required information with a <span style="color:yellow">subquery</span>
+Example: Find the name of customers who live in the same zip code area as Wayne Dick
+```sql
+SELECT cFirstName, cLastName
+FROM customers
+WHERE cZipCode = ???
+```
+- We don't know what zip code to put in the WHERE cluase
+- We can find the right zipcode by(since we arleady have Wayne Dick)
+```sql
+SELECT cZipCode
+FROM Customers
+WHERE cFirstName = 'Wayne' AND cLastName = 'Dick';
+```
+Now with the above query we have the zipcode, This query returns a single column and a single row.We can use the result as the condition value for cZipCode in the original query.  
+In effect, the output of the second query becomes the input to the first one
+- Syntactically, all we have to do is to enclose the subquery in parentheses, in the same place where
+```sql
+SELECT cFirstName, cLastName
+FROM customers
+WHERE cZipCode = (SELECT cZipCode
+FROM Customers
+WHERE cFirstName = 'Wayne' AND cLastName = 'Dick';)
+```
+
+A subquery that returns only one column and one row can be used any time we need a single value
