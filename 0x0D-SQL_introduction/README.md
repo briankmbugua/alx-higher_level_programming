@@ -129,4 +129,18 @@ Sometime the information we need is not actually in the database, but has to be 
 There are many functions in the implementation of SQL.
 
 # Computed columns
-
+We can compute values from information that is in a table simply by showing the computation in the SELECT clause.Each computation creates a new column in the output table, just as if it were a named table
+Example from orderlines table which has a unitSaleprice column
+```sql
+SELECT unitSalePrice * quantity
+FROM orderlines;
+```
+Computations are not just limited to column names;they also include constants e.g
+```sql
+SELECT unitSalePrice * 1.06
+FROM orderlines;
+```
+We can create our own column heading or alias using the AS keyword.
+```sql
+SELECT unitSalePrice * quantity AS subtotal
+FROM 
