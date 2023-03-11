@@ -201,3 +201,15 @@ WHERE cFirstName = 'Wayne' AND cLastName = 'Dick';)
 ```
 
 A subquery that returns only one column and one row can be used any time we need a single value
+
+# TASKS
+## 0.list databases
+Write a script that lists all databases of your MySQL server.  
+### solution
+The most common way to get a list of the MySQL databases is by using the mysql client to connect to the MySQL server and run SHOW DATABASES command.
+```bash
+$ mysql -u user -p
+mysql> SHOW DATABASES;
+```
+The command will print a list of all the databases for which the user has some kind of a privilage granted to.  
+You can also use SHOW SCHEMAS; The output will be the same as SHOW DATABASES command
