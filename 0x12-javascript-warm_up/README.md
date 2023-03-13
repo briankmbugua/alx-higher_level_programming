@@ -6,3 +6,14 @@ A script that prints 3 lines:
 A script that prints a message depending on the number arguments passed
 ## 3. Value of my argument
 A script that prints the first argument passed to it
+## 4. Create a sentence
+A script that prints two arguments passed to it, in the following format:"is"
+```bash
+$ ./4-concat.js c cool
+c is cool
+$ ./4-concat.js c 
+c is undefined
+$ ./4-concat.js
+undefined is undefined
+$
+```
