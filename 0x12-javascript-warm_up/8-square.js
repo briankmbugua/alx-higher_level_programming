@@ -1,11 +1,9 @@
 #!/usr/bin/node
-const input = Math.floor(process.argv[2]);
-if (isNaN(input) || input === undefined) {
+const size = parseInt(process.argv[2]);
+if (isNaN(size) || process.argv.length < 3) {
   console.log('Missing size');
-} else if (input >= 0) {
-  for (let r = 0; r < input; r++) {
-    let row = '';
-    for (let c = 0; c < input; c++) row += 'X';
-    console.log(row);
+} else {
+  for (let i = 0; i < size; i++) {
+    console.log('X'.repeat(size));
   }
 }
