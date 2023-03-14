@@ -1,4 +1,6 @@
 #!/usr/bin/node
+'use strict';
+
 const add = function addTwoNumbersFromArgv (a, b) {
   if (isNaN(a) || isNaN(b)) {
     return NaN;
