@@ -203,13 +203,41 @@ WHERE cFirstName = 'Wayne' AND cLastName = 'Dick';)
 A subquery that returns only one column and one row can be used any time we need a single value
 
 # TASKS
-## 0.list databases
+- ## 0.list databases
 Write a script that lists all databases of your MySQL server.  
-### solution
+### discussion
 The most common way to get a list of the MySQL databases is by using the mysql client to connect to the MySQL server and run SHOW DATABASES command.
 ```bash
 $ mysql -u user -p
-mysql> SHOW DATABASES;
+mysql> SHOW SCHEMAS/DATABASES;
 ```
 The command will print a list of all the databases for which the user has some kind of a privilage granted to.  
 You can also use SHOW SCHEMAS; The output will be the same as SHOW DATABASES command
+- ## 1.Create a database
+The script should not fail if the database already exists.
+Don't use SELECT or SHOW statements
+### discussion
+```bash
+mysql> CREATE DATABASE menagerie;
+```
+Under unix database names are case-sensitive,This is also true for table names.Creating a database does not select it for use.You must do that explicitly.
+```bash
+mysql> USE menagerie
+Database changed
+```
+You can select the database on the command line when you invoke mysql
+```bash
+$>mysql -h host -u user -p menagerie
+Enter password: ******
+```
+- ## 2. Delete a database
+A script that deletes the database hbtn_0c_0 in your MySQL server.The script should not fail if the database does not exist.
+### discussion
+The DROP DATABASE statement is used to drop an existing SQL database.
+```sql
+DROP DATABASE databasename;
+```
+- ## 3. List tables
+List all tables in a MySQL database
+### discussion
+SHOW TABLES;
