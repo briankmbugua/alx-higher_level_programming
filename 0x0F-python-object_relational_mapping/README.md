@@ -62,4 +62,25 @@ Write a script that list all states from the database hbtn_0e_0_usa:
 - Your script should connect to a MySQL sever
 - Results must be stored in asceding order by states.id
 - Your code should not be executed when imported
+## 1. Filter states
+Write a script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa:
+- The script should take 3 arguments: mysql username, mysql password and databse name
+- you must use the module MySQLdb
+- Results must be sorted in asceding order by states.id
+## 2. Filter states by user input
+Write a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.
+- Results must be sorted in asceding order
+## 3. SQL Injection...
+SQL injection involves inserting malicious SQL code into an application's input fields to gain unauthorized access to sensitive informatio or manipulate the database
+## Some ways to prevent SQL injection
+- Use parameterized queries: Use parameterized quries instead of concatenating user input directly into SQL queries.Parameterized queries separate the SQL code from the user input, making it impossible for an attacker to inject SQL code.
+- Input validation:Validate all user input to make sure it meets the expected format and datatype.This will prevent attackers from entering malicious code into fields.
+- Use prepared statements or stored procrdures instead of dynamic SQL queries.
+- Update software, to patch all known vunerabilities.
+- Use a firewall to restrict incoming traffic to the web application
+- Limit error messages as they reveal information about the structure of the databse and make it easier for attackers to exploit vunerabilities.
 
+## 4. Cities by states
+Write a scriot that lists all cities from the database hbtn_0e_4_usa
+Results must be sorted in ASC by cities.id
+You can only use execute() once
