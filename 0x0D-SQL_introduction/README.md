@@ -276,5 +276,10 @@ Write a script that updates a score
 ### discussion
 Use the UPDATE statement in combination with the WHERE clause to tartget the specific person to update the score for.
 
+## Score too low
+Write a script that removes all records with a score<=5
+### discussion
+Use the delete statement in combination with where clause
+
 
 
