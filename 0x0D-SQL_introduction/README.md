@@ -241,8 +241,29 @@ DROP DATABASE databasename;
 List all tables in a MySQL database
 ### discussion
 SHOW TABLES;
--- ## 4. First table
+- ## 4. First table
 Write a script that creates a table called first_table in the current database in your MySQL server
 ### discussion
 Use CREATE TABLE
+- ## 5 full table description without using DESCRIBE OR EXPLAIN statements
+The script 'SHOW CREATE TABLE first_table' this is a MySQL command that retrieves the complete CREATE TABLE statement used to create the 'first_table' in the specified database.it does not modify the table or its contents; rather it provides you with the original SQL statement used to crate the table
+## List all in table
+Script that lists all rows of the table first_table
+
+## First add 
+insert a new row in a table
+### discussion
+Use the INSERT INTO SQL statement
+
+## Count 89
+A script that displays the number of records with a certain column value
+
+## Full creation 
+Create a table in MySQL and add multiple rows and also insert data
+### discussion
+use CREATE TABLE SQL statement and INSER INTO.
+
+## List by best
+select all scores and name of a table with scores and name columns and several other columns and order by the scores highest score at the top 
+
 
