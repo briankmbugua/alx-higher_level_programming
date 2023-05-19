@@ -264,6 +264,12 @@ Create a table in MySQL and add multiple rows and also insert data
 use CREATE TABLE SQL statement and INSER INTO.
 
 ## List by best
-select all scores and name of a table with scores and name columns and several other columns and order by the scores highest score at the top 
+select all scores and name of a table with scores and name columns and several other columns and order by the scores highest score at the top
+
+## Select the best
+A Script that lists all records with a condition
+### discussion
+USE SQL WHERE clause
+
 
 
