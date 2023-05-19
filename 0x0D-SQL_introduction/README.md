@@ -281,5 +281,10 @@ Write a script that removes all records with a score<=5
 ### discussion
 Use the delete statement in combination with where clause
 
+## Average
+score avarge of all records
+## discussion
+use AVG clause after selecting all score records also include AS clause
+
 
 
