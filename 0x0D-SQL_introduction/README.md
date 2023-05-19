@@ -298,5 +298,8 @@ don't list those without a name value and in DESC order
 ### discussion
 To check those without name use IS NOT NULL
 
+## Go to UTF8
+converts a database to UTF8(utf8mb4, collate utf8mb4_unicode_ci)
+
 
 
