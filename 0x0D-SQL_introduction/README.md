@@ -286,5 +286,8 @@ score avarge of all records
 ## discussion
 use AVG clause after selecting all score records also include AS clause
 
+## Number by score
+list number of records with the same score
+
 
 
