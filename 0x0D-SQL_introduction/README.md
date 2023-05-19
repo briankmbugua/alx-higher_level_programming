@@ -283,11 +283,20 @@ Use the delete statement in combination with where clause
 
 ## Average
 score avarge of all records
-## discussion
+### discussion
 use AVG clause after selecting all score records also include AS clause
 
 ## Number by score
 list number of records with the same score
+
+### discussion
+Use COUNT and ORDER BY clauses
+
+## Say my name
+script that lists all records of second_table
+don't list those without a name value and in DESC order
+### discussion
+To check those without name use IS NOT NULL
 
 
 
