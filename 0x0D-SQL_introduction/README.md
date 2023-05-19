@@ -301,5 +301,9 @@ To check those without name use IS NOT NULL
 ## Go to UTF8
 converts a database to UTF8(utf8mb4, collate utf8mb4_unicode_ci)
 
+##  Temperatures #0
+import in hbtn_0c_ database this table dump temperaturs.sql and write a script that displays the avarage temperature by city ordered by temperature
+### discussion
+to import use this command mysql -u root -p hbtn_0c_0 < temperatures.sql or import using the MySQL workbench.
 
 
