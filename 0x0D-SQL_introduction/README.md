@@ -309,3 +309,8 @@ to import use this command mysql -u root -p hbtn_0c_0 < temperatures.sql or impo
 ## Temperatures #1
 a script that displays the top 3 of cities temparature during July and August ordered by temperature(descending)
 
+## 20. Temperatures #2
+display max temp of each state order by State name
+### discussion
+Use max to select max value
+
