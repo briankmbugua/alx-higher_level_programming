@@ -271,5 +271,10 @@ A Script that lists all records with a condition
 ### discussion
 USE SQL WHERE clause
 
+## cheating is bad
+Write a script that updates a score
+### discussion
+Use the UPDATE statement in combination with the WHERE clause to tartget the specific person to update the score for.
+
 
 
