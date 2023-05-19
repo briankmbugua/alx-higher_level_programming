@@ -306,4 +306,6 @@ import in hbtn_0c_ database this table dump temperaturs.sql and write a script t
 ### discussion
 to import use this command mysql -u root -p hbtn_0c_0 < temperatures.sql or import using the MySQL workbench.
 
+## Temperatures #1
+a script that displays the top 3 of cities temparature during July and August ordered by temperature(descending)
 
